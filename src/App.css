@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+
+}
+body{
+    background-color: #84090921;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    background-image: url(imageedit_1_9787469772.png);
+    background-color: white;
+    border: 1px solid rgb(159, 224, 155);
+    max-width: 70%;
+    margin: auto;
+    border-radius: 0.5em; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content{
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.content h2{
+    margin-bottom: 40px;
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+input{
+    border: 1px solid rgb(159, 224, 155);
+}
+
+input[type="text"]{
+    height: 40px;
+    width: 40%;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+}
+.shopping-list{
+    min-width: 30%;
+    list-style: none;
+}
+.shopping-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tobuy{
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1s ease;
+}
+.tobuy li{
+    flex: 1;
+    margin-right: 10px;
+}
+.borderActive:focus{
+    border: 2px solid rgb(159, 224, 155);
+    outline: none; 
+}
+
+.add-button{
+    padding: 10px;
+    margin-left: 12px;    
+    height: 40px;
+    background-color: rgb(159, 224, 155);
+    border-color: rgb(159, 224, 155);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.trash-btn,
+.complete-btn {
+    border-radius: 5px;
+    background: #ff8774;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    outline: none;
+    margin-right: 5px;
+}
+.complete-btn {
+    background: rgb(159, 224, 155);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*CUSTOM SELECTOR */
+.filter-tobuy {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+select{
+    outline: 0;
+    border: 1px solid rgb(159, 224, 155);
   }
-}
+  
+  /* Custom Select */
+  .select {
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  select {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    width: 10rem;
+  }
+  /* Arrow */
+  .select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background: rgb(159, 224, 155);
+    cursor: pointer;
+    pointer-events: none;
+    border-radius: 5px;
+  }
